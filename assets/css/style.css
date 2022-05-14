@@ -1,0 +1,66 @@
+
+#container{
+    display: grid;
+    grid-template-areas:'schermo schermo schermo schermo '
+                        'sette     otto    nove   diviso '
+                        'quattro   cinque   sei    per   '
+                        ' uno        due     tre   meno  '
+                        'cancella    zer   punto   piu  '
+                        'uguale     uguale  uguale uguale';
+    grid-template-rows: 6;                    
+}
+#schermo{
+    border: 1px solid black;
+    grid-area: schermo;
+}
+#zero{
+    grid-area: zer;
+}
+#uno{
+    grid-area:uno;
+}
+#due{
+    grid-area:due ;
+}
+#tre{
+    grid-area:tre ;
+}
+#quattro{
+    grid-area:quattro ;
+}
+#cinque{
+    grid-area:cinque ;
+}
+#sei{
+    grid-area: sei;
+}
+#sette{
+    grid-area: sette;
+}
+#otto{
+    grid-area:otto ;
+}
+#nove{
+    grid-area:nove ;
+}
+#piu{
+    grid-area:piu ;
+}
+#meno{
+    grid-area:meno;
+}
+#per{
+    grid-area:per ;
+}
+#diviso{
+    grid-area: diviso;
+}
+#uguale{
+    grid-area:uguale ;
+}
+#cancella{
+    grid-area: cancella;
+}
+#punto{
+    grid-area: punto;
+}
