@@ -1,98 +1,46 @@
-let display =[]
-
-
-function stampa(){
-    let dato =display.toString()
+let array =[]
+function stampa() {
+    let dato =array.toString()
     document.getElementById('numeri').innerHTML=dato.replaceAll(',','')
-    console.log(display)
+    console.log(array)
 }
-function zero(){
-  let num0 =display.push(0); 
-  console.log(display)
-  stampa()
-  
-}
-function uno(){
-    let num1 = display.push(1); 
-    console.log(display)
+  function numero(num) {
+    if(array.length >0 && array[array.length -1]!= '+'&& array[array.length -1]!= '-'&& array[array.length -1]!= 'x'&& array[array.length -1]!= '/'){
+    let pop= array.pop()
+    array.push('' + pop + num)
+    console.log(array)
+    }else {
+     array.push(num)
+    }
     stampa()
 }
-function due(){
-    let num2 =display.push(2); 
-    console.log(display)
-    stampa()
-
-   
-}
-function tre(){
-    let num3 = display.push(3); 
-    console.log(display)
-    stampa()
-    
-}
-  function quattro(){
-    let num4 = display.push(4); 
-    console.log(display)
-    stampa()
-    
-}
-  function cinque(){
-    let num5 = display.push(5); 
-    console.log(display)
-    stampa()
-   
-}
-  function sei(){
-    let num6 = display.push(6); 
-    console.log(display)
+function cancella(){
+    array.pop()
     stampa()
 }
-  function sette(){
-    let num7 = display.push(7); 
-    console.log(display)
+function operazione(op){
+ if(array.length==1 ){
+     array.push(op)
     stampa()
+ }
 }
-  function otto(){
-    let num8 = display.push(8); 
-    console.log(display)
-    stampa()
-}
-  function nove(){
-   let num9 = display.push(9); 
+function risultato(){
+ if(array.length>2){
+    let result
+   if(array[1]=='+'){
+    result= +array[0]  + +array[2]
+   } else if(array[1]=='-'){
+    result= +array[0]  - +array[2]
+   }else if(array[1]=='x'){
+    result= +array[0]  * +array[2]
+   }else if(array[1]=='/'){
+    result= +array[0]  / +array[2]
+   }
+   array=[result.toString()]
    stampa()
+ }
 }
 
-function piu(){
-    let plus = display.push('+'); 
-    stampa()
- }
- function meno (){
-    let minus = display.push('-'); 
-    stampa()
- }
- function per(){
-    let x = display.push('x'); 
-    stampa()
- }
- function diviso(){
-    let div = display.push('/'); 
-    stampa();
- }
 
- function operazione(){
-  let  string =display.toString()
-  let  datstring = string.replaceAll(',','')
-  console.log(datstring)
-  if{
-    
-  }
-
- }
- function cancella(){
-    display.pop()
-    stampa()
-
-}
-  
 
 

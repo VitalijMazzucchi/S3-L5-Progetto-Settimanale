@@ -64,3 +64,7 @@
 #punto{
     grid-area: punto;
 }
+button{
+    background: rgb(108,226,116);
+background: radial-gradient(circle, rgba(108,226,116,1) 0%, rgba(102,47,122,1) 100%);
+}
